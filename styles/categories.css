@@ -1,0 +1,17 @@
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+.category-box {
+  background: #f0f0ff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.category-box:hover {
+  background-color: #d8d8ff;
+}

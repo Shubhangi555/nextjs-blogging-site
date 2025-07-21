@@ -5,6 +5,9 @@ import { PortableText } from "@portabletext/react";
 import Navbar from "/app/components/Navbar";
 import Image from "next/image";
 
+// ✅ ISR enabled here (rebuilds page every 60 seconds)
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const posts = await client.fetch(`
     *[_type == "post" && defined(slug.current) && count(categories) > 0]{
@@ -58,7 +61,7 @@ export default async function BlogPage({ params }) {
           <PortableText value={post.body} />
           <h4>Noise {post.title}</h4>
           <p>Price: ₹3,999</p>
-          {/* <a href="https://amzn.to/your-affiliate-link" className="buy-button">Buy on Amazon</a> */}
+          lorem24
         </div>
       </main>
     </>

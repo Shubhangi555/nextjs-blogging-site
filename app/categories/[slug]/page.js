@@ -29,7 +29,7 @@ export default async function CategoryPage({ params }) {
 
   return (
     <div className="container">
-      <h1>Posts in "{slug}"</h1>
+      <h1>Posts in <q>{slug}</q></h1>
       {posts.length === 0 && <p>No posts found.</p>}
       <div className="post-grid">
         {posts.map((post) => (

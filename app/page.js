@@ -35,8 +35,8 @@ export default async function HomePage() {
                 <Image
                   src={post.mainImage}
                   alt={post.alternativeText || post.title || "Blog image"}
-                  width={300}
-                  height={200}
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
                 <Link href={`/blog/${category}/${post.slug?.current}`} className="post-title">
                   {post.title}

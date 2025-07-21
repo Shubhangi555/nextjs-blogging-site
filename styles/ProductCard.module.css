@@ -1,0 +1,36 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  background: white;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.card button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #4B6CB7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card button:hover {
+  background: #3656a5;
+}

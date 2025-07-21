@@ -1,0 +1,73 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1500px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  /* border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05); */
+}
+
+/* Header */
+header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+/* Post list */
+.post {
+  padding: 15px;
+  border: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+.post:hover {
+  background: #f0f0f0;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.post-description {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.post-grid{display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2%;}
+
+.badge {
+  display: inline-block;
+  background-color: #eef;
+  color: #333;
+  padding: 4px 8px;
+  margin-right: 5px;
+  font-size: 12px;
+  border-radius: 12px;
+}

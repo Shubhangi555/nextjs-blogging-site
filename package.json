@@ -1,0 +1,37 @@
+{
+  "name": "nextbloggingsite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.5",
+    "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^7.6.0",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.99.0",
+    "gray-matter": "^4.0.3",
+    "next": "15.3.5",
+    "next-sanity": "^9.12.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "sanity": "^3.99.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "tailwindcss": "^4"
+  }
+}

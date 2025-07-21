@@ -61,7 +61,6 @@ export default async function BlogPage({ params }) {
           <PortableText value={post.body} />
           <h4>Noise {post.title}</h4>
           <p>Price: ₹3,999</p>
-          lorem24
         </div>
       </main>
     </>

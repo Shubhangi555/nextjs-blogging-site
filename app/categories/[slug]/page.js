@@ -2,6 +2,8 @@ import { client } from "/lib/sanity";
 import Link from "next/link";
 
 export const revalidate = 60;
+// Optional fallback
+export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const categories = await client.fetch(`*[_type == "category"]{ "slug": slug.current }`);

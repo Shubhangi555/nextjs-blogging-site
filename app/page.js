@@ -3,6 +3,8 @@ import { client } from "/lib/sanity";
 import Navbar from "./components/Navbar";
 import Image from "next/image";
 
+export const revalidate = 60;
+
 export default async function HomePage() {
   const posts = await client.fetch(`
     *[_type == "post"] | order(publishedAt desc) {

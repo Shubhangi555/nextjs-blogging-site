@@ -35,17 +35,18 @@ header h1 {
 
 /* Post list */
 .post {
-    position: relative;
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: background .3s ease;
+}
+.image-wrapper{
+
+     position: relative;
    
     overflow: hidden;
     object-fit: cover;
     width: 100%;
     aspect-ratio: 3 / 2;
-}
-.image-wrapper{
- padding: 15px;
-    border: 1px solid #ddd;
-    transition: background .3s ease;
 }
 .post:hover {
   background: #f0f0f0;

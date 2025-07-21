@@ -1,6 +1,6 @@
 import { client } from "/lib/sanity";
 import Link from "next/link";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import "../../../styles/categories.css"
 
 export const revalidate = 60;

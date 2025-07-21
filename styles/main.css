@@ -35,9 +35,14 @@ header h1 {
 
 /* Post list */
 .post {
-  padding: 15px;
-  border: 1px solid #ddd;
-  transition: background 0.3s ease;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #ddd;
+    transition: background .3s ease;
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 3 / 2;
 }
 
 .post:hover {

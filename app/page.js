@@ -30,20 +30,23 @@ export default async function HomePage() {
           {posts.map((post) => {
             const category = post.categories?.[0]?.toLowerCase().replace(/\s+/g, '-');
 
-            return (
-              <div className="post" key={post._id}>
+            return (<>
+            <div className="post">
+              <div className="image-wrapper" key={post._id}>
                 <Image
                   src={post.mainImage}
                   alt={post.alternativeText || post.title || "Blog image"}
                   fill
                   style={{ objectFit: "cover" }}
                 />
+                  </div>
                 <Link href={`/blog/${category}/${post.slug?.current}`} className="post-title">
                   {post.title}
                 </Link>
                 <p className="post-date">{new Date(post.publishedAt).toDateString()}</p>
                 <p className="post-description">{post.excerpt}</p>
-              </div>
+                </div>
+            </>
             );
           })}
         </div>

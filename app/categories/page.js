@@ -20,7 +20,7 @@ export default async function CategoriesPage() {
         <h1>All Categories</h1>
         <div className="category-grid">
           {categories.map((cat) => (
-            <Link href={`/categories/${cat.slug}`} key={cat.slug} className="category-box">
+            <Link href={`/categories/${cat.slug.current}`} key={cat.slug} className="category-box">
               {cat.title}
             </Link>
           ))}

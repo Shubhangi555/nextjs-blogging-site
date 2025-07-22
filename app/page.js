@@ -30,8 +30,8 @@ export default async function HomePage() {
           {posts.map((post) => {
             const category = post.categories?.[0]?.toLowerCase().replace(/\s+/g, '-');
 
-            return (<>
-            <div className="post">
+            return (
+            <div key={post._id} className="post">
               <div className="image-wrapper" key={post._id}>
                 <Image
                   src={post.mainImage}
@@ -46,7 +46,7 @@ export default async function HomePage() {
                 <p className="post-date">{new Date(post.publishedAt).toDateString()}</p>
                 <p className="post-description">{post.excerpt}</p>
                 </div>
-            </>
+            
             );
           })}
         </div>

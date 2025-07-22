@@ -23,9 +23,9 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPage({ params }) {
-  const { slug } = params;
+  const { slug } =await params;
 
-  const post = await client.fetch(
+const post = await client.fetch(
     `*[_type == "post" && slug.current == $slug][0]{
       title,
       slug,
@@ -56,7 +56,7 @@ export default async function BlogPage({ params }) {
             src={post.mainImage}
             alt={post.alternativeText || post.title || "Blog image"}
             width={700}
-            height={400}
+            height={400}  
           />
           <PortableText value={post.body} />
           <h4>Noise {post.title}</h4>

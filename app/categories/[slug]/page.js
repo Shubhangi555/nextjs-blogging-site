@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { client } from "/lib/sanity";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ export async function generateStaticParams() {
 }
 
 export default async function CategoryPage({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
 
   const posts = await client.fetch(
     `*[_type == "post" && references(*[_type == "category" && slug.current == $slug]._id)]{
@@ -36,6 +37,14 @@ export default async function CategoryPage({ params }) {
       <div className="post-grid">
         {posts.map((post) => (
           <div key={post._id} className="post">
+            <div className="image-wrapper" key={post._id}>
+              <Image
+                src={post.mainImage}
+                alt={post.alternativeText || post.title || "Blog image"}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
             <Link href={`/blog/${slug}/${post.slug.current}`}>
               <h3>{post.title}</h3>
             </Link>

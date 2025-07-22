@@ -11,17 +11,17 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
+section{margin: 20px;}
 /* Container */
 .container {
   max-width: 1500px;
   width: 90%;
   margin: 0 auto;
-  padding: 20px;
+
   /* border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.05); */
 }
-
+a{text-decoration: none; }
 /* Header */
 header {
   margin-bottom: 2rem;
@@ -35,10 +35,12 @@ header h1 {
 
 /* Post list */
 .post {
-    padding: 15px;
+   
     border: 1px solid #ddd;
     transition: background .3s ease;
 }
+
+.post-info{padding: 15px;}
 .image-wrapper{
 
      position: relative;
@@ -53,7 +55,6 @@ header h1 {
 }
 
 .post-title {
-  font-size: 1.5rem;
   color: #0070f3;
   text-decoration: none;
 }

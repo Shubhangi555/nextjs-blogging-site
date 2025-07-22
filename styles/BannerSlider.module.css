@@ -1,0 +1,28 @@
+.bannerWrapper {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.bannerSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  z-index: 10;
+}

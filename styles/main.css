@@ -6,12 +6,16 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
   color: #333;
   line-height: 1.6;
 }
-section{margin: 20px;}
+
+section {
+  margin: 20px;
+}
+
 /* Container */
 .container {
   max-width: 1500px;
@@ -21,45 +25,69 @@ section{margin: 20px;}
   /* border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.05); */
 }
-a{text-decoration: none; }
+
+a {
+  text-decoration: none;
+}
+
 /* Header */
 header {
   margin-bottom: 2rem;
   text-align: center;
 }
 
-header h1 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 2rem;
   color: #222;
+  font-weight: 500;
 }
 
 /* Post list */
 .post {
-   
-    border: 1px solid #ddd;
-    transition: background .3s ease;
+  transition: background .3s ease;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.post-info{padding: 15px;}
-.image-wrapper{
-
-     position: relative;
-   
-    overflow: hidden;
-    object-fit: cover;
-    width: 100%;
-    aspect-ratio: 3 / 2;
+.post-info {
+  padding: 15px;
 }
-.post:hover {
+.post-info h3{text-transform: capitalize; font-weight: 500;color: #222;}
+
+.post-head{display: flex; align-items: center; justify-content: space-between;margin-bottom: 20px;}
+.image-wrapper {
+
+  position: relative;
+
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.image-wrapper img {
+  transition: 0.5s ease;
+}
+
+.post:hover .image-wrapper img {
   background: #f0f0f0;
+  scale: 1.1;
 }
+
 
 .post-title {
-  color: #0070f3;
+  color: #000000;
   text-decoration: none;
 }
 
 .post-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  /* Show only 4 lines */
+  line-clamp: 3;
   margin: 0.5rem 0;
   color: #555;
 }
@@ -69,7 +97,11 @@ header h1 {
   color: #888;
 }
 
-.post-grid{display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2%;}
+.post-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px
+}
 
 .badge {
   display: inline-block;
@@ -80,3 +112,5 @@ header h1 {
   font-size: 12px;
   border-radius: 12px;
 }
+.swiper-pagination-bullet-active{background: #ffffff !important;}
+.swiper-pagination-bullet{background: #ffffff !important;}

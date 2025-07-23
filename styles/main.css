@@ -85,9 +85,9 @@ h1 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   /* Show only 4 lines */
-  line-clamp: 3;
+  line-clamp: 2;
   margin: 0.5rem 0;
   color: #555;
 }

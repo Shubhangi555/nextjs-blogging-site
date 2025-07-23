@@ -35,7 +35,7 @@ export default function BannerSlider() {
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
-        navigation
+        navigation={false}
         loop
         className={styles.bannerSwiper}
       >

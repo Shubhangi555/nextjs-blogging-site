@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import "../../styles/categories.css"
 import Image from "next/image";
+import CategoryFilterPosts from "../components/CategoryFilterPosts";
 
 export const revalidate = 60;
 
@@ -17,11 +18,25 @@ export default async function CategoriesPage() {
     }
   `);
 
+   const posts = await client.fetch(`
+    *[_type == "post"] | order(publishedAt desc) {
+      _id,
+      title,
+      slug,
+      publishedAt,
+      excerpt,
+      body,
+      "categories": categories[]->title,
+      "mainImage": mainImage.asset->url,
+      "alternativeText": mainImage.alt
+    }
+  `);
   return (
     <>
-      <Navbar />
+      
       <section className="category-container">
-        <h1>All Categories</h1>
+        <CategoryFilterPosts categories={categories} posts={posts}/>
+        {/* <h1>All Categories</h1>
         <div className="post-grid">
           {categories.map((cat) => (
             <div className="post" key={cat.slug}>
@@ -38,7 +53,7 @@ export default async function CategoriesPage() {
               </Link>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
     </>
   );

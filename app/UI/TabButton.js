@@ -16,7 +16,8 @@ export default function TabButton({ isSelected, onClick, children }) {
         textTransform:"Capitalize",
         marginBottom:"20px",
         fontSize:"1rem",
-        padding:"0.3rem"
+        padding:"0.3rem",
+        fontFamily:"poppins"
        
       }}
     >

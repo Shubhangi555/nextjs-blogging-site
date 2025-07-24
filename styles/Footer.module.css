@@ -1,8 +1,9 @@
 .footer {
   background-color: #111;
   color: #eee;
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
   font-size: 0.95rem;
+
 }
 
 .footerContent {
@@ -68,4 +69,17 @@
   margin-top: 2rem;
   font-size: 0.85rem;
   color: #777;
+}
+
+
+@media only screen and (max-width: 1023px) {
+ .footerLinks{gap: 1rem;}
+}
+@media only screen and (max-width: 800px) {
+  .footerContent {
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .footerLinks a{font-size: 12px;}
 }

@@ -120,6 +120,22 @@ h1 {
 .category-container .tab-overflow .tab-buttons{display:inline-flex; justify-content: center;}
 .category-container .tab-overflow {overflow: auto; text-align: center;}
 .post-container .post-title{margin-bottom: 10px;}
+
+.view-all-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: #555;
+}
+
 /* RichTextRenderer */
 .pt-h1 {
   font-size: 2rem;

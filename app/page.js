@@ -11,7 +11,7 @@ export const revalidate = 60;
 
 export default async function HomePage() {
   const posts = await client.fetch(`
-    *[_type == "post"] | order(publishedAt desc) {
+    *[_type == "post"] | order(publishedAt desc)[0...12] {
       _id,
       title,
       slug,
@@ -75,6 +75,12 @@ export default async function HomePage() {
 
               );
             })}
+          </div>
+
+          <div className="view-all-button-wrapper">
+            <Link href="/blogs" className="view-all-button">
+              View All Posts
+            </Link>
           </div>
         </div>
       </section>

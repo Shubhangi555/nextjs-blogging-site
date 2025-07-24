@@ -76,7 +76,7 @@ const post = await client.fetch(
   return (
     <>
     
-      <section className="post-container" style={{textAlign:"justify"}}>
+      <section className="post-container" style={{textAlign:"left"}}>
         <div className="container">
           <div className="post-head">
             {post.categories.map((cat, index) => (

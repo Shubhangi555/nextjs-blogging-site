@@ -121,6 +121,8 @@ h1 {
 .category-container .tab-overflow {overflow: auto; text-align: center;}
 .post-container .post-title{margin-bottom: 10px;}
 
+.view-all-button-wrapper{text-align: center;}
+
 .view-all-button {
   display: inline-block;
   margin-top: 1.5rem;

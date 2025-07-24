@@ -35,5 +35,5 @@
  .bannerWrapper :global(.container) {
     width: 100% !important;
   }
-  .bannerWrapper{height: 60vh;}
+  .bannerWrapper{height: 300px;}
 }

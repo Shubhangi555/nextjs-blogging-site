@@ -23,7 +23,9 @@ export default async function BlogsPage() {
   return (
     <section>
       <div className="container">
+        <header>
         <h1>All Blog Posts</h1>
+        </header>
         <div className="post-grid">
           {posts.map((post) => {
             const category = post.categories?.[0]?.toLowerCase().replace(/\s+/g, '-');

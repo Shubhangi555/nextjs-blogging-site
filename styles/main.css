@@ -111,6 +111,8 @@ h1 {
   font-size: 12px;
   border-radius: 12px;
 }
+
+.post-container .post-body img{width: 100%; object-fit: cover;}
 .swiper-pagination-bullet-active{background: #ffffff !important;}
 .swiper-pagination-bullet{background: #ffffff !important;}
 

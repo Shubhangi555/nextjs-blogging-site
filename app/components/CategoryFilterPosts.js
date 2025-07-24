@@ -26,6 +26,7 @@ export default function CategoryFilterPosts({ categories, posts }) {
       <div className="container">
         <h1 style={{ textAlign: "center" }}>Explore by Category</h1>
 
+<div className="tab-overflow">
         <div className="tab-buttons" style={{ textAlign: "center" }}>
           <TabButton
             onClick={() => setSelectedCategory("all")}
@@ -44,6 +45,7 @@ export default function CategoryFilterPosts({ categories, posts }) {
               {cat.title}
             </TabButton>
           ))}
+        </div>
         </div>
 
         <div className="post-grid">

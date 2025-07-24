@@ -50,9 +50,11 @@ export default function BannerSlider() {
                 priority
                 style={{ objectFit: "cover" }}
               />
+              <div className="container">
               <Link href={banner.link} className={styles.caption}>
                  {banner.alt}
                 </Link>
+                </div>
             </div>
           </SwiperSlide>
         ))}

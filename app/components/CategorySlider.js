@@ -18,7 +18,7 @@ export default function CategorySlider({ categories }) {
         autoplay={{
           delay: 0,
           disableOnInteraction: false,
-          pauseOnMouseEnter: false,
+          pauseOnMouseEnter: true,
         }}
         speed={3000}
         loop={true}

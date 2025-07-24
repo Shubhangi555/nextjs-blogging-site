@@ -22,8 +22,8 @@ export default function CategorySlider({ categories }) {
         }}
         speed={3000}
         loop={true}
-        allowTouchMove={false}
-        grabCursor={false}
+        allowTouchMove={true}
+        grabCursor={true}
         className="marquee-slider"
       >
         {categories.concat(categories).map((cat, index) => (

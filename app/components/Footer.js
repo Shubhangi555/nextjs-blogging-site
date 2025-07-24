@@ -20,7 +20,7 @@ export default function Footer() {
                         <div className={styles.socialIcons}>
                             {/* Add Pinterest */}
                             <a
-                                href="https://www.pinterest.com/yourprofile"
+                                href="https://www.pinterest.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="Pinterest"

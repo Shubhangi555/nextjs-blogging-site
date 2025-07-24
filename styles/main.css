@@ -186,6 +186,9 @@ h1 {
   grid-template-columns: 1fr;
   gap: 20px;
 }
+.category-container .tab-overflow{margin-bottom: 10px;}
+.category-container .tab-overflow .tab-buttons{ align-items: start;}
+.category-container .tab-overflow .tab-buttons button {margin-bottom: 10px !important;}
 
 }
 

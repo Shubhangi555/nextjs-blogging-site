@@ -34,3 +34,7 @@
 }
 
 .marquee-slider-wrapper .image-wrapper{height: 180px;}
+
+@media only screen and (max-width: 800px) {
+  .marquee-slider-wrapper{margin: 20px 0;}
+}

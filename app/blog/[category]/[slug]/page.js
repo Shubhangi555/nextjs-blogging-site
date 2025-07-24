@@ -4,6 +4,7 @@ import { client } from "/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import Navbar from "/app/components/Navbar";
 import Image from "next/image";
+import { RichTextRenderer } from "../../../components/RichTextRenderer";
 
 // ✅ ISR enabled here (rebuilds page every 60 seconds)
 export const revalidate = 60;
@@ -75,17 +76,17 @@ const post = await client.fetch(
   return (
     <>
     
-      <section className="post-container" style={{textAlign:"center"}}>
+      <section className="post-container" style={{textAlign:"justify"}}>
         <div className="container">
           <div className="post-head">
             {post.categories.map((cat, index) => (
             <span key={index} className="badge">{cat}</span>
           ))}
-        <h1 className="post-title">{post.title}</h1>
-        <p className="post-date">{new Date(post.publishedAt).toDateString()}</p>
+      
+        <p className="post-date">updated on: {new Date(post.publishedAt).toDateString()}</p>
 </div>
         <div className="post-body">
-        
+          <h1 className="post-title">{post.title}</h1>
           <Image
             src={post.mainImage}
             alt={post.alternativeText || post.title || "Blog image"}
@@ -93,8 +94,8 @@ const post = await client.fetch(
             height={400}  
           />
          
-        <PortableText value={post.body} components={components} />
-          
+        <RichTextRenderer value={post.body} />
+        
         </div>
         </div>
       </section>

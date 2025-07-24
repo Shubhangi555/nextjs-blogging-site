@@ -67,7 +67,7 @@ export default function CategoryFilterPosts({ categories, posts }) {
                     {post.title}
                   </h3>
 
-                  <p className="post-date">{new Date(post.publishedAt).toDateString()}</p>
+                  <p className="post-date">updated on: {new Date(post.publishedAt).toDateString()}</p>
                   <div className="post-description">
                     <PortableText value={post.body} />
                   </div>

@@ -63,7 +63,7 @@ export default async function HomePage() {
                     </div>
                     <div className="post-info">
                       <h3>{post.title}</h3>
-                      <p className="post-date">{new Date(post.publishedAt).toDateString()}</p>
+                      <p className="post-date">updated on: {new Date(post.publishedAt).toDateString()}</p>
 
                       <div className="post-description">
                         <PortableText value={post.body} />
